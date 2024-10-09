@@ -20,17 +20,17 @@ export const features = [
 export const testimonials = [
   {
     name: "Sarah M.",
-    image: "12",
+    image: "https://randomuser.me/api/portraits/women/19.jpg",
     desc: '"I was skeptical at first, but these recipes are a game-changer. They are so easy to follow, and the results are consistently amazing. It\'s hard to believe something so good takes so little effort!"',
   },
   {
     name: "David R.",
-    image: "12",
+    image: "https://randomuser.me/api/portraits/men/71.jpg",
     desc: '"I\'m not a professional in the kitchen, but these simple recipes make me feel like one. The step-by-step guides are so straightforward, and the results? Amazing frozen desserts every time!"',
   },
   {
     name: "Emily R.",
-    image: "12",
+    image: "https://randomuser.me/api/portraits/women/0.jpg",
     desc: '"I never thought I could make such fun and creative frozen treats. The recipes push you to experiment, and the results are always delicious. It\'s like a whole new level of dessert-making!"',
   },
 ];

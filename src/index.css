@@ -2,9 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    *{
+        @apply scroll-smooth
+    }
+}
 @layer utilities{
     .highlight{
-        @apply uppercase text-s6 font-bold text-[12px];
+        @apply uppercase text-s6 font-bold text-[10px] md:text-[12px];
     }
     .size-1230{
         @apply h-[1230px] w-[1230px];
