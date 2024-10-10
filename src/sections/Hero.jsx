@@ -5,7 +5,7 @@ import CallToAction from "../components/CallToAction.jsx";
 const Hero = () => {
   return (
     <section className="bg-l1 w-full lg:w-9/12 mx-auto relative gap-5 px-2 py-12">
-      <div className="w-full flex justify-center items-start">
+      <div className="w-full flex justify-center lg:gap-12 items-start">
         <div className="flex flex-col max-w-lg py-2 w-1/2 md:w-auto ps-4">
           <p className="highlight">
             Perfect for dessert lovers! Now you can...

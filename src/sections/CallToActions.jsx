@@ -5,22 +5,44 @@ import axios from "axios";
 
 const CallToActions = () => {
   const [submitting, setSubmitting] = useState(false);
-  const [email, setEmail] = useState("");
+  const [formData, setFormData] = useState({
+    email: "",
+    code: "NINJACREAMI",
+    link: "NINJA CREAMI LINK",
+    reward: true,
+  });
   const [message, setMessage] = useState("");
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.email) {
+      setMessage("please enter your email address");
+      return;
+    }
     setSubmitting(true);
     try {
-      const response = await axios.post("/api/calltoactions", email);
+      const response = await axios.post(
+        "https://lead-capture.onrender.com/api/frozen/ninja-creami-cookbook",
+        formData
+      );
       if (response.status === 200) {
-        setSubmitting(false);
-        setMessage("");
+        setMessage("Please check your email for your discount coupon");
       } else {
         setMessage("Please try again later");
       }
     } catch (err) {
       console.error(err);
+    } finally {
+      setFormData((prev) => ({ ...prev, email: "" }));
+      setSubmitting(false);
     }
   };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    message && setMessage("");
+  };
+
   return (
     <div
       id="call-to-actions"
@@ -38,19 +60,25 @@ const CallToActions = () => {
               type="email"
               name="email"
               id="email"
+              value={formData.email}
               placeholder="email@example.com"
-              className="rounded-md w-2/3 p-2 focus:outline-p17"
+              className="rounded-md w-2/3 p-2 focus:outline-p17 text-p1"
               required
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={handleChange}
             />
             <Button
-              onSubmit={handleSubmit}
               additionalClassName="bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 text-[12px] text-center"
               disabled={submitting}
+              onClick={handleSubmit}
             >
-              claim your coupon
+              {submitting ? "Submitting" : "claim your coupon"}
             </Button>
           </div>
+          {message && (
+            <div className="highlight transition-all duration-700 ease-in-out">
+              {message}
+            </div>
+          )}
         </form>
       </div>
       <div className="flex flex-col items-center justify-center my-4">

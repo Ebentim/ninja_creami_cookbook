@@ -18,14 +18,7 @@ const CallToAction = () => {
             />
             <Button
               additionalClassName={
-                "bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 md:text-base text-center"
-              }
-              href={
-                alt === "buy on amazon"
-                  ? "/amazon_link"
-                  : alt === "buy kindle"
-                    ? "/kindle_link"
-                    : "selar_link"
+                "bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 text-sm md:text-base text-center"
               }
             >
               {alt === "buy on amazon"
