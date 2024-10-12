@@ -11,7 +11,7 @@ const Testimonial = () => {
             image={image}
             name={name}
             desc={desc}
-            additionalClassName={"px-3 py-3"}
+            additionalClassName={"px-3 py-3 w-full"}
           />
         ))}
       </div>

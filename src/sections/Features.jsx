@@ -6,7 +6,7 @@ const Features = () => {
   return (
     <section>
       <div className="w-[95%] lg:w-9/12 mx-auto bg-l2 mt-3 flex justify-center items-center flex-col md:flex-row">
-        {features.map(({ icon, highlight, title, desc, button }) => (
+        {features.map(({ icon, highlight, title, desc, button, href }) => (
           <Card
             key={title}
             icon={icon}
@@ -17,6 +17,7 @@ const Features = () => {
               "bg-transparent w-full md:w-1/2 h-[500px] px-9"
             }
             button={button}
+            href={"#call-to-actions"}
           />
         ))}
       </div>

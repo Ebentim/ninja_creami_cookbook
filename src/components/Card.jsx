@@ -1,8 +1,6 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clsx from "clsx";
 import Button from "./Button.jsx";
-import button from "./Button.jsx";
 
 const Card = ({
   icon,
@@ -13,6 +11,7 @@ const Card = ({
   name,
   additionalClassName,
   button,
+  href,
 }) => {
   const Inner = () => (
     <span>
@@ -52,7 +51,10 @@ const Card = ({
                 "bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 md:text-base text-center"
               }*/}
       {button && (
-        <Button additionalClassName="border bg-s1 absolute bottom-4 hover:text-p1 bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 md:text-base text-center">
+        <Button
+          href={href}
+          additionalClassName="border bg-s1 absolute bottom-4 hover:text-p1 bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 md:text-base text-center"
+        >
           {button}
         </Button>
       )}

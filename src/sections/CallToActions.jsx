@@ -22,7 +22,7 @@ const CallToActions = () => {
     try {
       const response = await axios.post(
         "https://lead-capture.onrender.com/api/frozen/ninja-creami-cookbook",
-        formData
+        formData,
       );
       if (response.status === 200) {
         setMessage("Please check your email for your discount coupon");
@@ -67,7 +67,7 @@ const CallToActions = () => {
               onChange={handleChange}
             />
             <Button
-              additionalClassName="bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 text-[12px] text-center"
+              additionalClassName="bg-t10 border-s1 border hover:bg-s1 hover:text-p1 transition-colors duration-500 w-36 px-1 text-[12px] text-center"
               disabled={submitting}
               onClick={handleSubmit}
             >
