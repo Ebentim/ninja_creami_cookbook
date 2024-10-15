@@ -54,19 +54,19 @@ export const faq = [
 ];
 
 export const brands = [
-  {
-    src: "/images/amazon.webp",
-    alt: "buy on amazon",
-    href: "/href",
-  },
-  {
-    src: "/images/kindle.webp",
-    alt: "buy kindle",
-    href: "/href",
-  },
+  // {
+  //   src: "/images/amazon.webp",
+  //   alt: "buy on amazon",
+  //   href: "/href",
+  // },
+  // {
+  //   src: "/images/kindle.webp",
+  //   alt: "buy kindle",
+  //   href: "/href",
+  // },
   {
     src: "/images/selar.png",
     alt: "buy on selar",
-    href: "/href",
+    href: "https://selar.co/ninja_creami_cookbook",
   },
 ];

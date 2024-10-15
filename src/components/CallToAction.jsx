@@ -10,6 +10,7 @@ const CallToAction = () => {
             key={src}
             href={href}
             className={`flex justify-start items-center flex-col-reverse w-36 gap-3`}
+            target="_blanc"
           >
             <img
               src={src}

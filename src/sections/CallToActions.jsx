@@ -7,8 +7,8 @@ const CallToActions = () => {
   const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
-    code: "NINJACREAMI",
-    link: "NINJA CREAMI LINK",
+    code: "GOURMET9248YG",
+    link: "https://selar.co/ninja_creami_cookbook",
     reward: true,
   });
   const [message, setMessage] = useState("");
@@ -22,7 +22,7 @@ const CallToActions = () => {
     try {
       const response = await axios.post(
         "https://lead-capture.onrender.com/api/frozen/ninja-creami-cookbook",
-        formData,
+        formData
       );
       if (response.status === 200) {
         setMessage("Please check your email for your discount coupon");

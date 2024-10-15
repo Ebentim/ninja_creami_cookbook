@@ -25,9 +25,9 @@ const Hero = () => {
           <img
             src="/images/hero.jpg"
             alt="hero"
-            className="h-auto max-h-72 md:max-h-[450px] rounded-s-md "
+            className="h-auto max-h-64 md:max-h-[450px] rounded-ss-md"
           />
-          <div className="h-4 w-full bg-white rounded-s-md"></div>
+          <div className="h-3 w-full bg-white rounded-s-md"></div>
         </div>
       </div>
 

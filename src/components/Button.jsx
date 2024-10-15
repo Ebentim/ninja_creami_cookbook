@@ -19,7 +19,7 @@ const Button = ({
       href={href}
       className={clsx(
         "bg-transparent uppercase font-mono px-3 py-1.5 rounded-md ",
-        additionalClassName,
+        additionalClassName
       )}
     >
       <Inner />
@@ -29,7 +29,7 @@ const Button = ({
       onClick={onClick}
       className={clsx(
         "bg-transparent uppercase font-mono px-3 py-1.5 rounded-md ",
-        additionalClassName,
+        additionalClassName
       )}
       {...props}
     >
